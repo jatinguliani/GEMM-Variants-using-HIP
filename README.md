@@ -7,7 +7,7 @@ The programs can be used as examples for someone trying to understand the patter
 At first, I wrote a code that is called naive GEMM. It simply fills matrices A and B, transfers them to the device memory, and performs multiplication with absolutely no fine-tuning.
 
 <p align="center">
-  <img src="plots/Figure1.png" width="350">
+  <img src="plots/figure1.png" width="350">
 </p>
 
 This case is then improved with the tiled method, in which both matrices are divided into blocks and each block is given a certain number of threads. The threads are programmed in such a way that they store the sum for the values of the final matrix C in their registers. To understand the performance, I used different tile sizes from 8, 16, up to 32. Whichever configuration gave the highest GFLOPS was then used to generate the Matrix Size vs. GFLOPS plot.
