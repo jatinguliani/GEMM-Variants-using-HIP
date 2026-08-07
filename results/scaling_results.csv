@@ -1,0 +1,19 @@
+Kernel,MatrixSize,TileSize,REG_M,REG_N,Time_ms
+Tiled,512,32,-,-,0.592161
+Tiled,1024,32,-,-,1.53856
+Tiled,2048,32,-,-,8.82919
+Tiled,4096,32,-,-,65.7401
+Tiled,8192,32,-,-,539.186
+Tiled,16384,32,-,-,4506.2
+2D Register Blocking,512,32,4,1,0.10368
+2D Register Blocking,1024,32,4,1,0.698163
+2D Register Blocking,2048,32,4,1,5.40027
+2D Register Blocking,4096,32,4,1,42.6662
+2D Register Blocking,8192,32,4,1,345.745
+2D Register Blocking,16384,32,4,1,2832.58
+Vectorized,512,16,-,-,0.259359
+Vectorized,1024,16,-,-,1.98657
+Vectorized,2048,16,-,-,15.846
+Vectorized,4096,16,-,-,126.568
+Vectorized,8192,16,-,-,1011.96
+Vectorized,16384,16,-,-,8087.5

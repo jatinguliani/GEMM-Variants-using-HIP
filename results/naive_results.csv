@@ -1,0 +1,4 @@
+Kernel,MatrixSize,Time_ms
+Naive,512,284.043
+Naive,1024,5720.08
+Naive,2048,56411.5

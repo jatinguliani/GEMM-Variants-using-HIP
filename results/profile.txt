@@ -1,0 +1,1 @@
+pmc: OccupancyPercent Wavefronts VALUInsts SALUInsts FetchSize WriteSize MemUnitBusy MemUnitStalled

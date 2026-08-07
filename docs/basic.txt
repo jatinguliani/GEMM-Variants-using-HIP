@@ -1,0 +1,784 @@
+
+[0;31mWARNING: We are phasing out development and support for roctracer/rocprofiler/rocprof/rocprofv2 in favor of rocprofiler-sdk/rocprofv3 in upcoming ROCm releases. Going forward, only critical defect fixes will be addressed for older versions of profiling tools and libraries. We encourage all users to upgrade to the latest version, rocprofiler-sdk library and rocprofv3 tool, to ensure continued support and access to new features.[0m
+
+RPL: on '260731_115443' from '/nfsapps/ubuntu-24.04/opt/rocm-7.2.4' in '/shared/prerelease/home/hlrs_2026/jatin/gpujbench'
+Basic HW counters:
+
+  gpu-agent4 : SQ_WAIT_INST_LDS : Number of wave-cycles spent waiting for LDS instruction issue. In units of 4 cycles. (per-simd, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : TCP_TCP_TA_DATA_STALL_CYCLES[0-15] : TCP stalls TA data interface. Now Windowed.
+      block TCP has 4 counters
+
+  gpu-agent4 : GRBM_COUNT : Tie High - Count Number of Clocks
+      block GRBM has 2 counters
+
+  gpu-agent4 : GRBM_GUI_ACTIVE : The GUI is Active
+      block GRBM has 2 counters
+
+  gpu-agent4 : GRBM_CP_BUSY : Any of the Command Processor (CPG/CPC/CPF) blocks are busy.
+      block GRBM has 2 counters
+
+  gpu-agent4 : GRBM_SPI_BUSY : Any of the Shader Pipe Interpolators (SPI) are busy in the shader engine(s).
+      block GRBM has 2 counters
+
+  gpu-agent4 : GRBM_TA_BUSY : Any of the Texture Pipes (TA) are busy in the shader engine(s).
+      block GRBM has 2 counters
+
+  gpu-agent4 : GRBM_TC_BUSY : Any of the Texture Cache Blocks (TCP/TCI/TCA/TCC) are busy.
+      block GRBM has 2 counters
+
+  gpu-agent4 : GRBM_CPC_BUSY : The Command Processor Compute (CPC) is busy.
+      block GRBM has 2 counters
+
+  gpu-agent4 : GRBM_CPF_BUSY : The Command Processor Fetchers (CPF) is busy.
+      block GRBM has 2 counters
+
+  gpu-agent4 : GRBM_UTCL2_BUSY : The Unified Translation Cache Level-2 (UTCL2) block is busy.
+      block GRBM has 2 counters
+
+  gpu-agent4 : GRBM_EA_BUSY : The Efficiency Arbiter (EA) block is busy.
+      block GRBM has 2 counters
+
+  gpu-agent4 : CPC_ME1_BUSY_FOR_PACKET_DECODE : Me1 busy for packet decode.
+      block CPC has 2 counters
+
+  gpu-agent4 : CPC_UTCL1_STALL_ON_TRANSLATION : One of the UTCL1s is stalled waiting on translation, XNACK or PENDING response.
+      block CPC has 2 counters
+
+  gpu-agent4 : CPC_CPC_STAT_BUSY : CPC Busy.
+      block CPC has 2 counters
+
+  gpu-agent4 : CPC_CPC_STAT_IDLE : CPC Idle.
+      block CPC has 2 counters
+
+  gpu-agent4 : CPC_CPC_STAT_STALL : CPC Stalled.
+      block CPC has 2 counters
+
+  gpu-agent4 : CPC_CPC_TCIU_BUSY : CPC TCIU interface Busy.
+      block CPC has 2 counters
+
+  gpu-agent4 : CPC_CPC_TCIU_IDLE : CPC TCIU interface Idle.
+      block CPC has 2 counters
+
+  gpu-agent4 : CPC_CPC_UTCL2IU_BUSY : CPC UTCL2 interface Busy.
+      block CPC has 2 counters
+
+  gpu-agent4 : CPC_CPC_UTCL2IU_IDLE : CPC UTCL2 interface Idle.
+      block CPC has 2 counters
+
+  gpu-agent4 : CPC_CPC_UTCL2IU_STALL : CPC UTCL2 interface Stalled waiting on Free, Tags or Translation.
+      block CPC has 2 counters
+
+  gpu-agent4 : CPC_ME1_DC0_SPI_BUSY : CPC Me1 Processor Busy.
+      block CPC has 2 counters
+
+  gpu-agent4 : CPF_CMP_UTCL1_STALL_ON_TRANSLATION : One of the Compute UTCL1s is stalled waiting on translation, XNACK or PENDING response.
+      block CPF has 2 counters
+
+  gpu-agent4 : CPF_CPF_STAT_BUSY : CPF Busy.
+      block CPF has 2 counters
+
+  gpu-agent4 : CPF_CPF_STAT_IDLE : CPF Idle.
+      block CPF has 2 counters
+
+  gpu-agent4 : CPF_CPF_STAT_STALL : CPF Stalled.
+      block CPF has 2 counters
+
+  gpu-agent4 : CPF_CPF_TCIU_BUSY : CPF TCIU interface Busy.
+      block CPF has 2 counters
+
+  gpu-agent4 : CPF_CPF_TCIU_IDLE : CPF TCIU interface Idle.
+      block CPF has 2 counters
+
+  gpu-agent4 : CPF_CPF_TCIU_STALL : CPF TCIU interface Stalled waiting on Free, Tags.
+      block CPF has 2 counters
+
+  gpu-agent4 : SPI_CSN_WINDOW_VALID : Clock count enabled by perfcounter_start event. Requires SPI_DEBUG_CNTL.DEBUG_PIPE_SEL to select source, DEBUG_PIPE_SEL = 1, source is CS1; DEBUG_PIPE_SEL = 2, source is CS2; DEBUG_PIPE_SEL = 3, source is CS3; default, source is CS0;
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_CSN_BUSY : Number of clocks with outstanding waves (SPI or SH). Requires SPI_DEBUG_CNTL.DEBUG_PIPE_SEL to select source, DEBUG_PIPE_SEL = 1, source is CS1; DEBUG_PIPE_SEL = 2, source is CS2; DEBUG_PIPE_SEL = 3, source is CS3; default, source is CS0;
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_CSN_NUM_THREADGROUPS : Number of threadgroups launched. Requires SPI_DEBUG_CNTL.DEBUG_PIPE_SEL to select source, DEBUG_PIPE_SEL = 1, source is CS1; DEBUG_PIPE_SEL = 2, source is CS2; DEBUG_PIPE_SEL = 3, source is CS3; default, source is CS0;
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_CSN_WAVE : Number of waves. Requires SPI_DEBUG_CNTL.DEBUG_PIPE_SEL to select source, DEBUG_PIPE_SEL = 1, source is CS1; DEBUG_PIPE_SEL = 2, source is CS2; DEBUG_PIPE_SEL = 3, source is CS3; default, source is CS0;
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_RA_REQ_NO_ALLOC : Arb cycles with requests but no allocation. Source is RA0
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_RA_REQ_NO_ALLOC_CSN : Arb cycles with CSn req and no CSn alloc. Source is RA0
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_RA_RES_STALL_CSN : Arb cycles with CSn req and no CSn fits. Source is RA0
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_RA_TMP_STALL_CSN : Cycles where csn wants to req but does not fit in temp space.
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_RA_WAVE_SIMD_FULL_CSN : Sum of SIMD where WAVE can't take csn wave when !fits. Source is RA0
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_RA_VGPR_SIMD_FULL_CSN : Sum of SIMD where VGPR can't take csn wave when !fits. Source is RA0
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_RA_SGPR_SIMD_FULL_CSN : Sum of SIMD where SGPR can't take csn wave when !fits. Source is RA0
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_RA_LDS_CU_FULL_CSN : Sum of CU where LDS can't take csn wave when !fits. Source is RA0
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_RA_BAR_CU_FULL_CSN : Sum of CU where BARRIER can't take csn wave when !fits. Source is RA0
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_RA_BULKY_CU_FULL_CSN : Sum of CU where BULKY can't take csn wave when !fits. Source is RA0
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_RA_TGLIM_CU_FULL_CSN : Cycles where csn wants to req but all CU are at tg_limit
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_RA_WVLIM_STALL_CSN : Number of clocks csn is stalled due to WAVE LIMIT.
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_SWC_CSC_WR : Number of clocks to write CSC waves to SGPRs (need to multiply this value by 4) Requires SPI_DEBUG_CNTL.DEBUG_PIPE_SEL to select source, DEBUG_PIPE_SEL = 1, source is CS1; DEBUG_PIPE_SEL = 2, source is CS2; DEBUG_PIPE_SEL = 3, source is CS3; default, source is CS0;
+      block SPI has 6 counters
+
+  gpu-agent4 : SPI_VWC_CSC_WR : Number of clocks to write CSC waves to VGPRs (need to multiply this value by 4) Requires SPI_DEBUG_CNTL.DEBUG_PIPE_SEL to select source, DEBUG_PIPE_SEL = 1, source is CS1; DEBUG_PIPE_SEL = 2, source is CS2; DEBUG_PIPE_SEL = 3, source is CS3; default, source is CS0;
+      block SPI has 6 counters
+
+  gpu-agent4 : SQ_ACCUM_PREV : For counter N, increment by the value of counter N-1. Only accumulates once every 4 cycles.
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_CYCLES : Clock cycles. (nondeterministic, per-simd, global)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_BUSY_CYCLES : Clock cycles while SQ is reporting that it is busy. (nondeterministic, per-simd, global)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_WAVES : Count number of waves sent to SQs. (per-simd, emulated, global)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_LEVEL_WAVES : Track the number of waves. Set ACCUM_PREV for the next counter to use this. (level, per-simd, global)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_WAVES_EQ_64 : Count number of waves with exactly 64 active threads sent to SQs. (per-simd, emulated, global)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_WAVES_LT_64 : Count number of waves with <64 active threads sent to SQs. (per-simd, emulated, global)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_WAVES_LT_48 : Count number of waves with <48 active threads sent to SQs. (per-simd, emulated, global)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_WAVES_LT_32 : Count number of waves sent <32 active threads sent to SQs. (per-simd, emulated, global)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_WAVES_LT_16 : Count number of waves sent <16 active threads sent to SQs. (per-simd, emulated, global)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_BUSY_CU_CYCLES : Count quad-cycles each CU is busy. (nondeterministic, per-simd)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_ITEMS : Number of valid items per wave. (per-simd, global)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS : Number of instructions issued. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU : Number of VALU instructions issued. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_ADD_F16 : Number of VALU ADD/SUB instructions on float16. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MUL_F16 : Number of VALU MUL instructions on float16. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_FMA_F16 : Number of VALU FMA/MAD instructions on float16. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_TRANS_F16 : Number of VALU transcendental instructions on float16. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_ADD_F32 : Number of VALU ADD/SUB instructions on float32. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MUL_F32 : Number of VALU MUL instructions on float32. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_FMA_F32 : Number of VALU FMA/MAD instructions on float32. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_TRANS_F32 : Number of VALU transcendental instructions on float32. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_ADD_F64 : Number of VALU ADD/SUB instructions on float64. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MUL_F64 : Number of VALU MUL instructions on float64. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_FMA_F64 : Number of VALU FMA/MAD instructions on float64. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_TRANS_F64 : Number of VALU transcendental instructions on float64. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_INT32 : Number of VALU 32-bit integer (signed or unsigned) instructions. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_INT64 : Number of VALU 64-bit integer (signed or unsigned) instructions. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_CVT : Number of VALU data conversion instructions. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MFMA_F8 : Number of VALU V_MFMA_*_F8 instructions. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MFMA_I8 : Number of VALU V_MFMA_*_I8 instructions. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MFMA_F16 : Number of VALU V_MFMA_*_F16 instructions. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MFMA_BF16 : Number of VALU V_MFMA_*_BF16 instructions. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MFMA_F32 : Number of VALU V_MFMA_*_F32 instructions. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MFMA_F64 : Number of VALU V_MFMA_*_F64 instructions. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MFMA_MOPS_F8 : Number of VALU matrix math operations (add or mul) performed dividied by 512, assuming a full EXEC mask, of data type F8. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MFMA_MOPS_I8 : Number of VALU matrix math operations (add or mul) performed dividied by 512, assuming a full EXEC mask, of data type I8. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MFMA_MOPS_F16 : Number of VALU matrix math operations (add or mul) performed dividied by 512, assuming a full EXEC mask, of data type F16. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MFMA_MOPS_BF16 : Number of VALU matrix math operations (add or mul) performed dividied by 512, assuming a full EXEC mask, of data type BF16. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MFMA_MOPS_F32 : Number of VALU matrix math operations (add or mul) performed dividied by 512, assuming a full EXEC mask, of data type F32. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VALU_MFMA_MOPS_F64 : Number of VALU matrix math operations (add or mul) performed dividied by 512, assuming a full EXEC mask, of data type F64. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_MFMA : Number of MFMA instructions issued. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VMEM_WR : Number of VMEM write instructions issued (including FLAT). (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VMEM_RD : Number of VMEM read instructions issued (including FLAT). (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VMEM : Number of VMEM instructions issued. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_SALU : Number of SALU instructions issued. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_SMEM : Number of SMEM instructions issued. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_FLAT : Number of FLAT instructions issued. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_LDS : Number of LDS instructions issued (including FLAT). (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_GDS : Number of GDS instructions issued. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_EXP_GDS : Number of EXP and GDS instructions issued, excluding skipped export instructions. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_BRANCH : Number of Branch instructions issued. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_SENDMSG : Number of Sendmsg instructions issued. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_VSKIPPED : Number of vector instructions skipped. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INST_LEVEL_VMEM : Number of in-flight VMEM instructions. Set next counter to ACCUM_PREV and divide by INSTS_VMEM for average latency. Includes FLAT instructions. (per-simd, level, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INST_LEVEL_SMEM : Number of in-flight SMEM instructions (*2 load/store; *2 atomic; *2 memtime; *4 wb/inv). Set next counter to ACCUM_PREV and divide by INSTS_SMEM for average latency per smem request. Falls slightly short of total request latency because some fetches are divided into two requests that may finish at different times and this counter collects the average latency of the two. (per-simd, level, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INST_LEVEL_LDS : Number of in-flight LDS instructions. Set next counter to ACCUM_PREV and divide by INSTS_LDS for average latency. Includes FLAT instructions. (per-simd, level, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_VALU_MFMA_BUSY_CYCLES : Number of cycles the MFMA ALU is busy (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_WAVE_CYCLES : Number of wave-cycles spent by waves in the CUs (per-simd, nondeterministic). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_WAIT_ANY : Number of wave-cycles spent waiting for anything (per-simd, nondeterministic). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_WAIT_INST_ANY : Number of wave-cycles spent waiting for any instruction issue. In units of 4 cycles. (per-simd, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_ACTIVE_INST_ANY : Number of cycles each wave is working on an instruction. (per-simd, emulated). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_ACTIVE_INST_VMEM : Number of cycles the SQ instruction arbiter is working on a VMEM instruction. (per-simd, emulated). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_ACTIVE_INST_LDS : Number of cycles the SQ instruction arbiter is working on a LDS instruction. (per-simd, emulated). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_ACTIVE_INST_VALU : Number of cycles the SQ instruction arbiter is working on a VALU instruction. (per-simd, emulated). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_ACTIVE_INST_SCA : Number of cycles the SQ instruction arbiter is working on a SALU or SMEM instruction. (per-simd, emulated). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_ACTIVE_INST_EXP_GDS : Number of cycles the SQ instruction arbiter is working on an EXPORT or GDS instruction. (per-simd, emulated). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_ACTIVE_INST_MISC : Number of cycles the SQ instruction aribter is working on a BRANCH or SENDMSG instruction. (per-simd, emulated). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_ACTIVE_INST_FLAT : Number of cycles the SQ instruction arbiter is working on a FLAT instruction. (per-simd, emulated). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INST_CYCLES_VMEM_WR : Number of cycles needed to send addr and cmd data for VMEM write instructions. (per-simd, emulated). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INST_CYCLES_VMEM_RD : Number of cycles needed to send addr and cmd data for VMEM read instructions. (per-simd, emulated). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INST_CYCLES_SMEM : Number of cycles needed to execute scalar memory reads. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INST_CYCLES_SALU : Number of cycles needed to execute non-memory read scalar operations. (per-simd, emulated). Units in quad-cycles(4 cycles)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_THREAD_CYCLES_VALU : Number of thread-cycles used to execute VALU operations (similar to INST_CYCLES_VALU but multiplied by # of active threads). (per-simd)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_IFETCH : Number of instruction fetch requests from cache. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_IFETCH_LEVEL : Number of instruction fetch requests from cache. (per-simd, level)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_LDS_BANK_CONFLICT : Number of cycles LDS is stalled by bank conflicts. (emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_LDS_ADDR_CONFLICT : Number of cycles LDS is stalled by address conflicts. (emulated,nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_LDS_UNALIGNED_STALL : Number of cycles LDS is stalled processing flat unaligned load/store ops. (emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_LDS_MEM_VIOLATIONS : Number of threads that have a memory violation in the LDS.(emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_LDS_ATOMIC_RETURN : Number of atomic return cycles in LDS. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_LDS_IDX_ACTIVE : Number of cycles LDS is used for indexed (non-direct,non-interpolation) operations. (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_ACCUM_PREV_HIRES : For counter N, increment by the value of counter N-1.
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_WAVES_RESTORED : Count number of context-restored waves sent to SQs. (per-simd, emulated, global)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_WAVES_SAVED : Count number of context-saved waves. (per-simd, emulated, global)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQ_INSTS_SMEM_NORM : Number of SMEM instructions issued normalized to match smem_level (*2 load/store; *2 atomic; *2 memtime; *4 wb/inv). (per-simd, emulated)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_ICACHE_INPUT_VALID_READYB :  Input stalled by SQC (per-SQ, nondeterministic, unwindowed)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_DCACHE_INPUT_VALID_READYB : Input stalled by SQC (per-SQ, nondeterministic, unwindowed)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_TC_REQ : Total number of TC requests that were issued by instruction and constant caches. (No-Masking, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_TC_INST_REQ : Number of insruction requests to the TC (No-Masking, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_TC_DATA_READ_REQ : Number of data read requests to the TC (No-Masking, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_TC_DATA_WRITE_REQ : Number of data write requests to the TC (No-Masking, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_TC_DATA_ATOMIC_REQ : Number of data atomic requests to the TC (No-Masking, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_TC_STALL : Valid request stalled TC request interface (no-credits). (No-Masking, nondeterministic, unwindowed)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_ICACHE_BUSY_CYCLES : Clock cycles while cache is reporting that it is busy. (No-Masking, nondeterministic, unwindowed)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_ICACHE_REQ : Number of requests. (per-SQ, per-Bank)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_ICACHE_HITS : Number of cache hits. (per-SQ, per-Bank, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_ICACHE_MISSES : Number of cache misses, includes uncached requests. (per-SQ, per-Bank, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_ICACHE_MISSES_DUPLICATE : Number of misses that were duplicates (access to a non-resident, miss pending CL). (per-SQ, per-Bank, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_DCACHE_BUSY_CYCLES :  Clock cycles while cache is reporting that it is busy. (No-Masking, nondeterministic, unwindowed)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_DCACHE_REQ : Number of requests (post-bank-serialization). (per-SQ, per-Bank)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_DCACHE_HITS : Number of cache hits. (per-SQ, per-Bank, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_DCACHE_MISSES : Number of cache misses, includes uncached requests. (per-SQ, per-Bank, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_DCACHE_MISSES_DUPLICATE : Number of misses that were duplicates (access to a non-resident, miss pending CL). (per-SQ, per-Bank, nondeterministic)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_DCACHE_ATOMIC : Number of atomic requests. (per-SQ, per-Bank)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_DCACHE_REQ_READ_1 : Number of constant cache 1 dw read requests. (per-SQ)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_DCACHE_REQ_READ_2 : Number of constant cache 2 dw read requests. (per-SQ)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_DCACHE_REQ_READ_4 : Number of constant cache 4 dw read requests. (per-SQ)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_DCACHE_REQ_READ_8 : Number of constant cache 8 dw read requests. (per-SQ)
+      block SQ has 8 counters
+
+  gpu-agent4 : SQC_DCACHE_REQ_READ_16 : Number of constant cache 16 dw read requests. (per-SQ)
+      block SQ has 8 counters
+
+  gpu-agent4 : TA_TA_BUSY[0-15] : TA block is busy. Perf_Windowing not supported for this counter.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_TOTAL_WAVEFRONTS[0-15] : Total number of wavefronts processed by TA.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_BUFFER_WAVEFRONTS[0-15] : Number of buffer wavefronts processed by TA.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_BUFFER_READ_WAVEFRONTS[0-15] : Number of buffer read wavefronts processed by TA.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_BUFFER_WRITE_WAVEFRONTS[0-15] : Number of buffer write wavefronts processed by TA.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_BUFFER_ATOMIC_WAVEFRONTS[0-15] : Number of buffer atomic wavefronts processed by TA.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_BUFFER_TOTAL_CYCLES[0-15] : Number of buffer cycles issued to TC.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_BUFFER_COALESCED_READ_CYCLES[0-15] : Number of buffer coalesced read cycles issued to TC.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_BUFFER_COALESCED_WRITE_CYCLES[0-15] : Number of buffer coalesced write cycles issued to TC.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_ADDR_STALLED_BY_TC_CYCLES[0-15] : Number of cycles addr path stalled by TC. Perf_Windowing not supported for this counter.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_ADDR_STALLED_BY_TD_CYCLES[0-15] : Number of cycles addr path stalled by TD. Perf_Windowing not supported for this counter.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_DATA_STALLED_BY_TC_CYCLES[0-15] : Number of cycles data path stalled by TC. Perf_Windowing not supported for this counter.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_FLAT_WAVEFRONTS[0-15] : Number of flat opcode wavfronts processed by the TA.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_FLAT_READ_WAVEFRONTS[0-15] : Number of flat opcode reads processed by the TA.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_FLAT_WRITE_WAVEFRONTS[0-15] : Number of flat opcode writes processed by the TA.
+      block TA has 2 counters
+
+  gpu-agent4 : TA_FLAT_ATOMIC_WAVEFRONTS[0-15] : Number of flat opcode atomics processed by the TA.
+      block TA has 2 counters
+
+  gpu-agent4 : TD_TD_BUSY[0-15] : TD is processing or waiting for data. Perf_Windowing not supported for this counter.
+      block TD has 2 counters
+
+  gpu-agent4 : TD_TC_STALL[0-15] : TD is stalled waiting for TC data.
+      block TD has 2 counters
+
+  gpu-agent4 : TD_SPI_STALL[0-15] : TD is stalled SPI vinit
+      block TD has 2 counters
+
+  gpu-agent4 : TD_LOAD_WAVEFRONT[0-15] : Count the wavefronts with opcode = load, include atomics and store.
+      block TD has 2 counters
+
+  gpu-agent4 : TD_ATOMIC_WAVEFRONT[0-15] : Count the wavefronts with opcode = atomic.
+      block TD has 2 counters
+
+  gpu-agent4 : TD_STORE_WAVEFRONT[0-15] : Count the wavefronts with opcode = store.
+      block TD has 2 counters
+
+  gpu-agent4 : TD_COALESCABLE_WAVEFRONT[0-15] : Count wavefronts that TA finds coalescable.
+      block TD has 2 counters
+
+  gpu-agent4 : TCP_GATE_EN1[0-15] : TCP interface clocks are turned on. Not Windowed.
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_GATE_EN2[0-15] : TCP core clocks are turned on. Not Windowed.
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TD_TCP_STALL_CYCLES[0-15] : TD stalls TCP
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCR_TCP_STALL_CYCLES[0-15] : TCR stalls TCP_TCR_req interface
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_READ_TAGCONFLICT_STALL_CYCLES[0-15] : Tagram conflict stall on a read
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_WRITE_TAGCONFLICT_STALL_CYCLES[0-15] : Tagram conflict stall on a write
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_ATOMIC_TAGCONFLICT_STALL_CYCLES[0-15] : Tagram conflict stall on an atomic
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_PENDING_STALL_CYCLES[0-15] : Stall due to data pending from L2
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TA_TCP_STATE_READ[0-15] : Number of state reads
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_VOLATILE[0-15] : Total number of L1 volatile pixels/buffers from TA
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TOTAL_ACCESSES[0-15] : Total number of pixels/buffers from TA. Equals TCP_PERF_SEL_TOTAL_READ+TCP_PERF_SEL_TOTAL_NONREAD
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TOTAL_READ[0-15] : Total number of read pixels/buffers from TA. Equals TCP_PERF_SEL_TOTAL_HIT_LRU_READ + TCP_PERF_SEL_TOTAL_MISS_LRU_READ + TCP_PERF_SEL_TOTAL_MISS_EVICT_READ
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TOTAL_WRITE[0-15] : Total number of local write pixels/buffers from TA. Equals TCP_PERF_SEL_TOTAL_MISS_LRU_WRITE+ TCP_PERF_SEL_TOTAL_MISS_EVICT_WRITE
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TOTAL_ATOMIC_WITH_RET[0-15] : Total number of atomic with return pixels/buffers from TA
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TOTAL_ATOMIC_WITHOUT_RET[0-15] : Total number of atomic without return pixels/buffers from TA
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TOTAL_WRITEBACK_INVALIDATES[0-15] : Total number of cache invalidates. Equals TCP_PERF_SEL_TOTAL_WBINVL1+ TCP_PERF_SEL_TOTAL_WBINVL1_VOL+ TCP_PERF_SEL_CP_TCP_INVALIDATE+ TCP_PERF_SEL_SQ_TCP_INVALIDATE_VOL. Not Windowed.
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_UTCL1_REQUEST[0-15] : Total CLIENT_UTCL1 NORMAL requests
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_UTCL1_TRANSLATION_MISS[0-15] : Total utcl1 translation misses
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_UTCL1_TRANSLATION_HIT[0-15] : Total utcl1 translation hits
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_UTCL1_PERMISSION_MISS[0-15] : Total utcl1 permission misses
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TOTAL_CACHE_ACCESSES[0-15] : Count of total cache line (tag) accesses (includes hits and misses).
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_READ_REQ[0-15] : Total read requests from TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_WRITE_REQ[0-15] : Total write requests from TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_ATOMIC_WITH_RET_REQ[0-15] : Total atomic with return requests from TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_ATOMIC_WITHOUT_RET_REQ[0-15] : Total atomic without return requests from TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_NC_READ_REQ[0-15] : Total read requests with NC mtype from this TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_NC_WRITE_REQ[0-15] : Total write requests with NC mtype from this TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_NC_ATOMIC_REQ[0-15] : Total atomic requests with NC mtype from this TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_UC_READ_REQ[0-15] : Total read requests with UC mtype from this TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_UC_WRITE_REQ[0-15] : Total write requests with UC mtype from this TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_UC_ATOMIC_REQ[0-15] : Total atomic requests with UC mtype from this TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_CC_READ_REQ[0-15] : Total write requests with CC mtype from this TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_CC_WRITE_REQ[0-15] : Total write requests with CC mtype from this TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_CC_ATOMIC_REQ[0-15] : Total atomic requests with CC mtype from this TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_RW_READ_REQ[0-15] : Total write requests with RW mtype from this TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_RW_WRITE_REQ[0-15] : Total write requests with RW mtype from this TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCP_TCC_RW_ATOMIC_REQ[0-15] : Total atomic requests with RW mtype from this TCP to all TCCs
+      block TCP has 4 counters
+
+  gpu-agent4 : TCA_CYCLE[0-31] : Number of cycles. Not windowable.
+      block TCA has 4 counters
+
+  gpu-agent4 : TCA_BUSY[0-31] : Number of cycles we have a request pending. Not windowable.
+      block TCA has 4 counters
+
+  gpu-agent4 : TCC_CYCLE[0-15] : Number of cycles. Not windowable.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_BUSY[0-15] : Number of cycles we have a request pending. Not windowable.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_REQ[0-15] : Number of requests of all types. This is measured at the tag block. This may be more than the number of requests arriving at the TCC, but it is a good indication of the total amount of work that needs to be performed.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_STREAMING_REQ[0-15] : Number of streaming requests. This is measured at the tag block.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_NC_REQ[0-15] : The number of noncoherently cached requests. This is measured at the tag block.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_UC_REQ[0-15] : The number of uncached requests. This is measured at the tag block.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_CC_REQ[0-15] : The number of coherently cached requests. This is measured at the tag block.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_RW_REQ[0-15] : The number of RW requests. This is measured at the tag block.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_PROBE[0-15] : Number of probe requests. Not windowable.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_PROBE_ALL[0-15] : Number of external probe requests with with EA_TCC_preq_all== 1. Not windowable.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_INTERNAL_PROBE[0-15] : Number of self-probes spawned by TCC for CC writes/atomic operations. Not windowable.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_READ[0-15] : Number of read requests. Compressed reads are included in this, but metadata reads are not included.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_WRITE[0-15] : Number of write requests.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_ATOMIC[0-15] : Number of atomic requests of all types.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_HIT[0-15] : Number of cache hits.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_MISS[0-15] : Number of cache misses. UC reads count as misses.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_WRITEBACK[0-15] : Number of lines written back to main memory. This includes writebacks of dirty lines and uncached write/atomic requests.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_WRREQ[0-15] : Number of transactions (either 32-byte or 64-byte) going over the TC_EA_wrreq interface. Atomics may travel over the same interface and are generally classified as write requests. This does not include probe commands.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_WRREQ_64B[0-15] : Number of 64-byte transactions going (64-byte write or CMPSWAP) over the TC_EA_wrreq interface.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_WRREQ_PROBE_COMMAND[0-15] : Number of probe commands going over the TC_EA_wrreq interface.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_WR_UNCACHED_32B[0-15] : Number of 32-byte write/atomic going over the TC_EA_wrreq interface due to uncached traffic. Note that CC mtypes can produce uncached requests, and those are included in this. A 64-byte request will be counted as 2
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_WRREQ_STALL[0-15] : Number of cycles a write request was stalled.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_TOO_MANY_EA_WRREQS_STALL[0-15] : Number of cycles the TCC could not send a EA write request because it already reached its maximum number of pending EA write requests.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_WRREQ_LEVEL[0-15] : The sum of the number of EA write requests in flight. This is primarily meant for measure average EA write latency. Average write latency = TCC_PERF_SEL_EA_WRREQ_LEVEL/TCC_PERF_SEL_EA_WRREQ.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_ATOMIC[0-15] : Number of transactions going over the TC_EA_wrreq interface that are actually atomic requests.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_ATOMIC_LEVEL[0-15] : The sum of the number of EA atomics in flight. This is primarily meant for measure average EA atomic latency. Average atomic latency = TCC_PERF_SEL_EA_WRREQ_ATOMIC_LEVEL/TCC_PERF_SEL_EA_WRREQ_ATOMIC.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_RDREQ[0-15] : Number of TCC/EA read requests (either 32-byte or 64-byte)
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_RDREQ_32B[0-15] : Number of 32-byte TCC/EA read requests
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_RD_UNCACHED_32B[0-15] : Number of 32-byte TCC/EA read due to uncached traffic. A 64-byte request will be counted as 2
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_RDREQ_LEVEL[0-15] : The sum of the number of TCC/EA read requests in flight. This is primarily meant for measure average EA read latency. Average read latency = TCC_PERF_SEL_EA_RDREQ_LEVEL/TCC_PERF_SEL_EA_RDREQ.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_TAG_STALL[0-15] : Number of cycles the normal request pipeline in the tag was stalled for any reason. Normally, stalls of this nature are measured exactly from one point the pipeline, but that is not the case for this counter. Probes can stall the pipeline at a variety of places, and there is no single point that can reasonably measure the total stalls accurately.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_BUBBLE[0-15] : Number of 128-byte read requests sent to EA.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_NORMAL_WRITEBACK[0-15] : Number of writebacks due to requests that are not writeback requests.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_ALL_TC_OP_WB_WRITEBACK[0-15] : Number of writebacks due to all TC_OP writeback requests.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_NORMAL_EVICT[0-15] : Number of evictions due to requests that are not invalidate or probe requests.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_ALL_TC_OP_INV_EVICT[0-15] : Number of evictions due to all TC_OP invalidate requests.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_PROBE_EVICT[0-15] : Number of evictions/invalidations due to probes. Not windowable.
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_RDREQ_DRAM[0-15] : Number of TCC/EA read requests (either 32-byte or 64-byte) destined for DRAM (MC).
+      block TCC has 4 counters
+
+  gpu-agent4 : TCC_EA0_WRREQ_DRAM[0-15] : Number of TCC/EA write requests (either 32-byte of 64-byte) destined for DRAM (MC).
+      block TCC has 4 counters
+
+ROCPRofiler: 0 contexts collected
